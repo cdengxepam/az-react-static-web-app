@@ -7,8 +7,10 @@ function App() {
     (async function () {
       const { text } = fetch(`/api/httpTrigger1`).then(response => {
         if(response.status === 200) {
-          console.log(response)
+          return response.json()
         }
+      }).then(data => {
+        console.log('data: ', data)
       });
       setData(text);
     })();
