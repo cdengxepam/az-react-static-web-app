@@ -5,7 +5,7 @@ function App() {
 
   useEffect(() => {
     (async function () {
-      const { text } = fetch(`/api/httpTrigger1`).then(response => {
+      const { text } = fetch(`/api/httpTrigger1?name=kevin`).then(response => {
         if(response.status === 200) {
           return response.json()
         }
