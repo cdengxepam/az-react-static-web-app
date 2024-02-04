@@ -10,6 +10,7 @@ function App() {
     })();
   });
 
+  console.log(JSON.stringify(data))
   return <div>{data}</div>;
 }
 
