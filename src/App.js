@@ -5,14 +5,13 @@ function App() {
 
   useEffect(() => {
     (async function () {
-      const { text } = fetch(`/api/httpTrigger1?name=kevin`).then(response => {
+      fetch(`/api/httpTrigger1?name=kevin`).then(response => {
         if(response.status === 200) {
           return response.json()
         }
       }).then(data => {
-        console.log('data: ', data)
+        setData(data.body);
       });
-      setData(text);
     })();
   });
 
