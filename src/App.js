@@ -5,7 +5,7 @@ function App() {
 
   useEffect(() => {
     (async function () {
-      const { text } = await( await fetch(`/api/httpTrigger1`)).json();
+      const { text } = await( await fetch(`/api/httpTrigger1`));
       setData(text);
     })();
   });
