@@ -7,7 +7,7 @@ function App() {
     (async function () {
       const { text } = fetch(`/api/httpTrigger1`).then(response => {
         if(response.status === 200) {
-          console.log(response.json())
+          console.log(response)
         }
       });
       setData(text);
