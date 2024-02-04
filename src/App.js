@@ -6,7 +6,9 @@ function App() {
   useEffect(() => {
     (async function () {
       const { text } = fetch(`/api/httpTrigger1`).then(response => {
-        console.log(response)
+        if(response.status === 200) {
+          console.log(response.json())
+        }
       });
       setData(text);
     })();
